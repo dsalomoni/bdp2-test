@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag dsalomoni/web_server
     - name: Push the image to DockerHub
-      run: docker login -u dsalomoni -p (( secrets.DOCKER_TOKEN )) && docker push dsalomoni/web_server
+      run: docker login -u dsalomoni -p {{ secrets.DOCKER_TOKEN }} && docker push dsalomoni/web_server
